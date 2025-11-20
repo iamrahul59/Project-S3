@@ -3,7 +3,7 @@ name: Upload Website
 on:
   push:
     branches:
-      - master   # or main if your branch is named 'main'
+      - main   # or main if your branch is named 'main'
 
 jobs:
   deploy:
@@ -20,4 +20,4 @@ jobs:
           aws-region: us-east-1  # replace with your AWS region if different
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync . s3://piyushs3-bucket --delete
+        run: aws s3 sync . s3://myfirstsw-bucket --delete
